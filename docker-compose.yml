@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  bot:
+    build: ./bot
+    env_file: .env
+    depends_on:
+      - app
+
+  app:
+    build: ./app
+    ports:
+      - "8000:8000"

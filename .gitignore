@@ -1,0 +1,36 @@
+# Виртуальное окружение
+.venv/
+env/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Файлы среды и секреты
+.env
+
+# Настройки редакторов
+.vscode/
+.idea/
+
+# Временные папки и кеш
+tmp/
+.cache/
+
+# Docker
+docker-compose.override.yml
+*.dockerfile
+
+# MacOS системные файлы
+.DS_Store
+
+# Pytest cache
+.pytest_cache/
