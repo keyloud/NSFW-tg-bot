@@ -1,13 +1,19 @@
-version: '3.9'
 
 services:
+  app:
+    volumes:
+      - ./output:/app/output
+    build:
+      context: .
+      dockerfile: app/Dockerfile.api
+    env_file: .env
+    ports:
+      - "8000:8000"
+
   bot:
-    build: ./bot
+    build:
+      context: .
+      dockerfile: app/Dockerfile.bot
     env_file: .env
     depends_on:
       - app
-
-  app:
-    build: ./app
-    ports:
-      - "8000:8000"
